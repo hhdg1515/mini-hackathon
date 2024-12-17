@@ -1,130 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=800, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=800, initial-scale=1.0" />
     <title>90s Twitter Retro</title>
-	<!-- CSS -->
-	<link rel="stylesheet" href="index.css">
-	<!-- Font Awesome CDN -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
-	<script src="index.js" type="module"></script>
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" type="module"></script>
+  </head>
 
-<body>
-	 <div class="container">
-	<header class="header">
-		<!-- Twitter Logo -->
-		<div class='logo'>
-			<img src='./images/twitterlogo.png' alt="Twitter Logo"/>
-		</div>		
-		 <!-- Navigation Bar -->
-			<nav class="nav">
-				<ul class="nav-list">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Find People</a></li>
-					<li><a href="#">Settings</a></li>
-					<li><a href="#">Help</a></li>
-					<li><a href="#">Sign out</a></li>
-				</ul>
-			</nav>
-	</header>
-	
-	 <!-- Main Section -->
-	<main>
-		<div class="main-left">
-			<div class="tweet-card">
-				<div class="input-box">
-					<img src="./images/blue-bird.png" class="tweet-icon" alt="Tweet Icon">
-					<textarea placeholder="What's happening?" id="tweet-input"></textarea>
-				</div>
-				<div class="input-buttons">
-					<div class="decorative-buttons"> <!-- 3 decorative buttons -->
-						<div class="button-wrapper">
-						<div class="button-icon emoji-button"></div>
-						</div>
-						<div class="button-wrapper">
-						<div class="button-icon gif-button"></div>
-						</div>
-						<div class="button-wrapper">
-						<div class="button-icon photo-button"></div>
-						</div>
-					</div>	
-					<button id="tweet-btn">Tweet</button> <!-- Tweets Button here -->
-			</div>
-		</div>
-		<h1>Recent Public Updates</h1>
-		<div class="divider-line"></div>
-			<div class="feed" id="feed">
-				<!-- Tweets render here -->
-			</div>
-		</div>
+  <body>
+    <div class="container">
+      <header class="header">
+        <!-- Twitter Logo -->
+        <div class="logo">
+          <img src="./images/twitterlogo.png" alt="Twitter Logo" />
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Find People</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Sign out</a></li>
+          </ul>
+        </nav>
+      </header>
 
-	<div class="main-right">
-			 <!-- Profile Info -->
-		<section class="user">
-			<div class="user-profile">
-				<img src="./images/timetraveller.png" class='user-photo'/>
-				<h3>Time Traveller @Clark H</h3>
-			</div>
-			<div class="user-stats">
-				<span>Tweets: <strong>245</strong></span>
-				<span>Following: <strong>345</strong></span>
-				<span>Followers: <strong>789</strong></span>
-			</div>
-		</section>
+      <!-- Main Section -->
+      <main>
+        <div class="main-left">
+          <div class="tweet-card">
+            <div class="input-box">
+              <img
+                src="./images/blue-bird.png"
+                class="tweet-icon"
+                alt="Tweet Icon"
+              />
+              <textarea
+                placeholder="What's happening?"
+                id="tweet-input"
+              ></textarea>
+            </div>
+            <div class="input-buttons">
+              <div class="decorative-buttons">
+                <!-- 3 decorative buttons -->
+                <div class="button-wrapper">
+                  <div class="button-icon emoji-button"></div>
+                </div>
+                <div class="button-wrapper">
+                  <div class="button-icon gif-button"></div>
+                </div>
+                <div class="button-wrapper">
+                  <div class="button-icon photo-button"></div>
+                </div>
+              </div>
+              <button id="tweet-btn">Tweet</button>
+              <!-- Tweets Button here -->
+            </div>
+          </div>
 
-		<!-- Trends Section -->
-		<div class="trends-box">
-			<h3 class="trends-header">Trends for You</h3>
-			<ul class="trends-list">
-				<li>#Y2KStyle</li>
-				<li>#BackToThe90s</li>
-				<li>#RetroTech</li>
-				<li>#NostalgiaFest</li>
-				<li>#DialUpMemories</li>
-			</ul>
-		</div>
+          <h1>Recent Public Updates</h1>
+          <div class="divider-line"></div>
+          <div class="feed" id="feed">
+            <!-- Tweets render here -->
+          </div>
+        </div>
 
-		<!-- Search Bar -->
-		<div class="search-box">
-			<input type="text" placeholder="Search Twitter" class="search-input">
-			<div class="button-wrapper">
-				<div class="button-icon search-button"></div>
-			</div>
-		</div>
+        <div class="main-right">
+          <!-- Profile Info -->
+          <section class="user">
+            <!-- Profile Info -->
+            <div class="user-profile">
+              <img src="./images/timetraveller.png" class="user-photo" />
+              <h3>Time Traveller @Clark H</h3>
+            </div>
+            <div class="user-stats">
+              <span>Tweets: <strong>245</strong></span>
+              <span>Following: <strong>345</strong></span>
+              <span>Followers: <strong>789</strong></span>
+            </div>
+          </section>
 
-		<!-- Who to Follow -->
-		<div class="suggested-accounts">
-			<h3 class="accounts-header">What to Follow</h3>
-			<div class="accounts-list">
-				<p>@Nintendo Virtual Boy 📼</p>
-				<p>@Nokia 🎵</p>
-				<p>@BlackBerry 850 📟</p>
-			</div>
-		</div>
-	</div>	
-		</div>
-		</main>
+          <!-- Trends Section -->
+          <div class="trends-box">
+            <h3 class="trends-header">Trends for You</h3>
+            <ul class="trends-list">
+              <li>#Baggy Jeans 👖</li>
+              <li>#Walkman 🎧</li>
+              <li>#Backstreet Boys 🎶</li>
+              <li>#Rollerblades 🛼</li>
+              <li>#Lisa Frank 🌈</li>
+            </ul>
+          </div>
 
-</body>
- <!-- Footer Section -->
-<footer class="footer">
-	 <!-- Footer Links -->
-	 <ul class="footer-list">
-        <li><a href="#">@1998 Twitter</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Status</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Terms of Service</a></li>
-     </ul>
-</footer>
-<div>
+          <!-- Search Bar -->
+          <div class="search-box">
+            <input
+              type="text"
+              placeholder="Search Twitter"
+              class="search-input"
+            />
+            <div class="button-wrapper">
+              <div class="button-icon search-button"></div>
+            </div>
+          </div>
+
+          <!-- Who to Follow -->
+          <div class="suggested-accounts">
+            <h3 class="accounts-header">What to Follow</h3>
+            <div class="accounts-list">
+              <p>@Nintendo Virtual Boy 📼</p>
+              <p>@Nokia 🎵</p>
+              <p>@BlackBerry 850 📱</p>
+			  <p>@Beepers 📟</p>
+			  <p>@Tamagotchi 🐣</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <!-- Footer Links -->
+        <ul class="footer-list">
+          <li><a href="#">@1998 Twitter</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
