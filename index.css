@@ -1,64 +1,59 @@
 * {
     box-sizing: border-box;
-}
-
-html{
-    background-color:#778899;
+     margin: 0;
+    padding: 0;
 }
 
 html, body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
     font-family: "VT323", monospace;
+    background-color: navy;
+    margin: 0;
 }
 
-body{
+/*Container*/
+.container {
     width: 800px;
-    align-items: center;
-    margin:0 auto;
-    background-color: #bfbfbf;
+    height: 600px;
+    background-color: #D3D3D3; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header and Navigation */
 header{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top:  8px;
-}
-
-main{
-    display: flex;
-}
-
-.main-left {
-  width: calc(100% - 288px); 
-  height: 488px;
-  background-color: #E9E9E9;
-  padding: 8px;
-  border: 1px solid #89879C;
-  box-sizing: border-box;
-}
-
-.main-right{
-   background-color: #E9E9E9;
-   width: 288px;
-      box-shadow: 
-    -1px -1px 0px 0px #000 inset,
-    1px 1px 0px 0px #FFF inset,
-    -2px -2px 0px 0px #7F7F7F inset,
-    2px 2px 0px 0px #DFDFDF inset;
-     border: 1px solid #89879C;
+    padding: 16px 8px 8px 16px;
+    background-color: #BEBEBE;
+    margin-bottom: 16px;
 }
 
 nav{
+    padding: 10px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    text-align: center;
     background-color: #E9E9E9;
     box-shadow: 
     -1px -1px 0px 0px #000 inset,
     1px 1px 0px 0px #FFF inset,
-    -2px -2px 0px 0px #7F7F7F inset,
-    2px 2px 0px 0px #DFDFDF inset;
+    -1px -1px 0px 0px #7F7F7F inset,
+    1px 1px 0px 0px #DFDFDF inset;
+}
+
+ul {
+    display: flex;
+}
+
+li{
+    text-decoration: none;
 }
 
 /* typography and icons */
@@ -70,42 +65,29 @@ h1 {
   margin-top: 12px;
 }
 
-ul {
-    display: flex;
-}
-
-li{
-    text-decoration: none;
-}
-
 i{
-    font-size: 15px;
-    cursor: pointer;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
-.fa-solid{
-    color: #999;
+.fa-solid, .fa-regular{
+    color: dimgray;
+}
+
+.fa-solid:hover, .fa-regular:hover{
+    color: navy;
 }
 
 .liked{
-    color: red;
+    color: #FF6511;
 }
 
 .retweeted {
-  color: limegreen;
+  color: #50ABF1;
 }
 
 /* layout */
-
-header{
-    padding-bottom: 8px;
-}
-
-.tweet-input-area {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
 
 .logo img {
     width: 120px;  
@@ -114,8 +96,7 @@ header{
 
 nav ul {
     display: flex;
-    gap: 8px;
-    margin-right: 24px;
+    gap: 16px;
 }
 
 nav ul li {
@@ -127,16 +108,36 @@ nav ul li a {
     text-decoration: none;
     font-family: 'VT323', monospace;
     font-size: 16px;
-    transition: color 0.2s;
+    transition: color 0.1s ease-out;
 }
 
 nav ul li a:hover {
     color: navy; 
 }
 
+/* Main Content */
+main {
+  display: flex;
+  margin-left: 16px;
+}
+
+.main-left {
+  width: calc(100% - 288px); 
+  height: 488px;
+  background-color: #E9E9E9;
+  padding: 8px;
+   border: 0.5px solid #89879C;
+  box-sizing: border-box;
+}
+
+.main-right{
+   background-color: #E9E9E9;
+   width: 276px;
+   border: 0.5px solid #89879C;
+  }
+
 /* main-left textareas + btn */
 
-/* Tweet card (Dialog Box) */
 .tweet-card {
   display: flex;
   flex-direction: column;
@@ -145,8 +146,8 @@ nav ul li a:hover {
   height: 120px;
   margin: 0;
   box-shadow: 
-    2px 2px 1px 0px rgba(255, 255, 255, 0.50) inset,
-    -2px -2px 1px 0px rgba(0, 0, 0, 0.80) inset;
+    1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset,
+    -1px -1px 1px 0px rgba(0, 0, 0, 0.80) inset;
 }
 
 .input-box{
@@ -160,20 +161,28 @@ nav ul li a:hover {
   margin: 12px 0 8px 16px;
 }
 
+/* Tweet Input Area */
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
 textarea{
     border: none;
     resize: none;
     padding: 4px 0 0 4px;
-    margin: 12px 0 8px 8px;
+    margin: 12px 16px 8px 8px;
     height: 56px;
     width: 394px;
     font-size: 16px;
     line-height: 15px;
     box-sizing: border-box;
     font-family: "VT323", monospace;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
-/* Decorative Buttons Section */
+/* Decorative Buttons */
 
 .input-buttons{
     display: flex;
@@ -233,26 +242,26 @@ textarea{
   font-family: "VT323", monospace;
   background-color: #1DA1F2;
   box-shadow: 
-    -1px -1px 0px 0px #000 inset,
-    1px 1px 0px 0px #FFF inset,
-    -2px -2px 0px 0px #7F7F7F inset,
-    2px 2px 0px 0px #DFDFDF inset;
+    -1px -1px 0px 0px white inset,
+    1px 1px 0px 0px white inset,
+    -1px -1px 0px 0px #7F7F7F inset,
+    1px 1px 0px 0px #DFDFDF inset;
   color: white;
   font-size: 16px;
   text-align: center;
   letter-spacing: 1%;
   cursor: pointer;
   margin-left: auto;
-  margin-right: 24px;
+  margin-right: 16px;
 }
 
 #tweet-btn:hover {
-  color: navy;
-  background-color: white;
-  font-style: italic;
+  color: white;
+  background-color: navy;
   cursor: pointer;
 }
 
+/* User and Trends */
 .user{
     margin: 0;
     width: 240px;
@@ -316,25 +325,28 @@ textarea{
 }
 
 .accounts-header{
-     color: #1100FF;
+    color: #1100FF;
     font-size: 16px;
     letter-spacing: 1px;
     margin: 0;
 }
 
- p.accounts-list{
-    margin: 0;
-    line-height: -1px;
+ .accounts-list p{
+    margin-top: 4px;
+    line-height: -0.5px;
 }
 
 .search-box{
     display: flex;
     margin-left: 16px;
+    margin-top: 4px;
 }
 
 .search-input{
     font-family: "VT323", monospace;
     margin-right: 8px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.8);
+   
 }
 /* tweet */
 
@@ -353,8 +365,8 @@ textarea{
     margin: 0;
     background-color: #C0C0C0;
      box-shadow: 
-    2px 2px 1px 0px rgba(255, 255, 255, 0.50) inset,
-    -2px -2px 1px 0px rgba(0, 0, 0, 0.80) inset;
+    1px 1px 1px 0px rgba(255, 255, 255, 0.50) inset,
+    -1px -1px 1px 0px rgba(0, 0, 0, 0.80) inset;
 }
 
 .tweet-inner:hover {
@@ -378,7 +390,7 @@ textarea{
 .tweet-reply{
     border-top: 1px solid lightgray;
     padding: 4px 0 0 0px;
-    margin: 4px 0 4px 0px;
+    margin: 4px 0;
     width: 100%;
 }
 
@@ -394,8 +406,8 @@ textarea{
     width: 320px;
     font-size: 16px;
     line-height: 20px;
-    margin-top: -8px;
     padding-left: 8px;
+    margin-bottom: 8px;
     color: navy;
 }
 
@@ -408,17 +420,13 @@ textarea{
 }
 
 /* Footer Styling */
-footer.footer {
+footer{
     margin-top: 12px;
-    width: 760px;
+    width: 100%;
     background-color: #E9E9E9;
-    padding: 6px 20px;
+    padding: 8px;
     font-family: 'VT323', monospace;
-    box-shadow: 
-    -1px -1px 0px 0px #000 inset,
-    1px 1px 0px 0px #FFF inset,
-    -2px -2px 0px 0px #7F7F7F inset,
-    2px 2px 0px 0px #DFDFDF inset;
+    text-align: center;
 }
 
 
@@ -440,7 +448,7 @@ footer.footer {
     font-size: 15px;
     color: #1DA1F2;
     text-decoration: none; 
-    transition: color 0.2s ease; 
+    transition: color 0.1s ease; 
 }
 
 .footer-list a:hover {
